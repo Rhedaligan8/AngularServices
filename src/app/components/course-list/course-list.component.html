@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURSE LIST</title>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bolder;">COURSE LIST</p>
+
+<div class="userinput">
+
+<!-- Input fields for student details -->
+<label for="Iden">ID:  </label>
+<input type="number" placeholder="ID" [(ngModel)]="id" name="Iden"/>
+
+<label for="name"> Course: </label>
+<input type="text" placeholder="Enter Course name" [(ngModel)]="namecourse" /><br>
+
+
+
+<!-- Button to add a new student -->
+<button class="btn btn-primary" (click)="addCourse()">Add Course</button>
+</div>
+
+
+<ul>
+  <span class="span">ID</span>
+  <span class="span">Course</span>
+ 
+  <li *ngFor="let course of course" style="margin-left: 40px;">
+     {{ course.id }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     {{ course.namecourse }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     
+  </li>
+</ul>
+
+</body>
+</html>
