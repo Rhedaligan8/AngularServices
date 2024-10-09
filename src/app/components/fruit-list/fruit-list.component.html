@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRUIT LIST</title>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bolder;">FRUIT LIST</p>
+
+<div class="userinput">
+
+<!-- Input fields for student details -->
+<label for="Iden">ID:  </label>
+<input type="number" placeholder="ID" [(ngModel)]="id" name="Iden"/>
+
+<label for="name"> Name: </label>
+<input type="text" placeholder="Fruit's name" [(ngModel)]="name" /><br>
+
+<label for="Price">Price: </label>
+<input type="number" placeholder="Price" [(ngModel)]="price" />
+
+<label for="quantity"> Quantity: </label>
+<input type="text" placeholder="Quantity" [(ngModel)]="quantity" /><br>
+
+<!-- Button to add a new student -->
+<button class="btn btn-primary" (click)="addFruits()">Add Fruits</button>
+</div>
+
+
+<ul>
+  <span class="span">ID</span>
+  <span class="span">Name</span>
+  <span class="span" style="margin-left: -8px;">Price</span>
+  <span class="span" style="margin-left: -8px;">Quantity</span>
+  <li *ngFor="let fruits of fruits" style="margin-left: 40px;">
+     {{ fruits.id }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     {{ fruits.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ fruits.price }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{ fruits.quantity }}
+  </li>
+</ul>
+
+</body>
+</html>
