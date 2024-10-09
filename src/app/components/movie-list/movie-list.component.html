@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE LIST</title>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bolder;">MOVIE LIST</p>
+
+<div class="userinput">
+
+<!-- Input fields for MOVIE details -->
+<label for="Iden">ID:  </label>
+<input type="number" placeholder="ID" [(ngModel)]="id" name="Iden"/>
+
+<label for="title"> Title: </label>
+<input type="text" placeholder="Movie title " [(ngModel)]="title" /><br>
+
+<label for="Rating">Ratings: </label>
+<input type="text" placeholder="Ratings" [(ngModel)]="ratings" />
+
+<label for="YearPublished"> Year Published </label>
+<input type="number" placeholder="publishedyear" [(ngModel)]="yearpublished" /><br>
+
+
+<!-- Button to add a Moviey -->
+<button class="btn btn-primary" (click)="addMovie()">Add Movie</button>
+</div>
+
+
+<ul>
+  <span class="span">ID</span>
+  <span class="span">TITLE</span>
+  <span class="span">RATINGS</span>
+  <span class="span">YEAR PUBLISHED</span>
+  <li *ngFor="let movie of movie">
+     {{ movie.id }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     {{ movie.title }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ movie.ratings }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+     {{ movie.yearpublished }}
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </li>
+</ul>
+
+</body>
+</html>
