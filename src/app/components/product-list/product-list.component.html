@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD PRODUCT LIST</title>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bolder;">ADD PRODUCT LIST</p>
+
+<div class="userinput">
+
+<!-- Input fields for CAR MODEL details -->
+<label for="Iden">ID:  </label>
+<input type="number" placeholder="ID" [(ngModel)]="id" name="Iden"/>
+
+<label for="name"> Name: </label>
+<input type="text" placeholder="Product's name " [(ngModel)]="name" /><br>
+
+<label for="types">Types: </label>
+<input type="text" placeholder="Types" [(ngModel)]="types" />
+
+<label for="price"> Price:  </label>
+<input type="number" placeholder="Enter price" [(ngModel)]="price" /><br>
+
+<label for="quantity"> Quantity:  </label>
+<input type="number" placeholder="Enter quantity" [(ngModel)]="quantity" /><br>
+
+
+<!-- Button to add a CAR MODEL -->
+<button class="btn btn-primary" (click)="addProduct()">Add Car</button>
+</div>
+
+
+<ul>
+  <span class="span">ID</span>
+  <span class="span">NAME</span>
+  <span class="span">TYPES</span>
+  <span class="span">PRICE</span>
+  <span class="span">QUANTITY</span>
+  <li *ngFor="let product of products">
+     {{ product.id }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+     {{ product.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ product.types }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ product.price }}
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+     {{product.quantity}}
+  </li>
+</ul>
+
+</body>
+</html>
