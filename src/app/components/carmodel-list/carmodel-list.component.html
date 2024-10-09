@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR MODEL LIST</title>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bolder;">CAR MODEL LIST</p>
+
+<div class="userinput">
+
+<!-- Input fields for CAR MODEL details -->
+<label for="Iden">ID:  </label>
+<input type="number" placeholder="ID" [(ngModel)]="id" name="Iden"/>
+
+<label for="types"> Types: </label>
+<input type="text" placeholder="e.g 4 wheels " [(ngModel)]="types" /><br>
+
+<label for="brand">Brand: </label>
+<input type="text" placeholder="e.g Isuzu" [(ngModel)]="brand" />
+
+<label for="model"> Model:  </label>
+<input type="text" placeholder="e.g Traviz" [(ngModel)]="model" /><br>
+
+<label for="YearPublished"> Year:  </label>
+<input type="number" placeholder="e.g 2007" [(ngModel)]="year" /><br>
+
+
+<!-- Button to add a CAR MODEL -->
+<button class="btn btn-primary" (click)="addCarModel()">Add Car</button>
+</div>
+
+
+<ul>
+  <span class="span">ID</span>
+  <span class="span">TYPES</span>
+  <span class="span">BRAND</span>
+  <span class="span">MODEL</span>
+  <span class="span">YEAR</span>
+  <li *ngFor="let model of carmodel">
+     {{ model.id }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     {{ model.types }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ model.brand }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ model.model }}
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{model.year}}
+  </li>
+</ul>
+
+</body>
+</html>

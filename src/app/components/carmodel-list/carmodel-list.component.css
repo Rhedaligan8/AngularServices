@@ -1,0 +1,33 @@
+body {
+    
+    height: 100vh;
+}
+.inp {
+    margin: 10px;
+}
+.userinput {
+    width: 100%;
+}
+.userinput button {
+    width: 200px;
+    margin: 10px 0px 0px 100px;
+    border: 10px 2px solid;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 6px;
+}
+
+.span {
+    margin: 33px 33px 33px 35px;
+    font-size: 25px;
+
+}
+ul li {
+    list-style-type: none;
+    margin-left: 41px;
+    margin-top: 10px;
+    font-size: 20px;    
+}
+li {
+    padding-right: 0px;
+}
