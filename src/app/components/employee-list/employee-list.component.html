@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE LIST</title>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bolder;">EMPLOYEE LIST</p>
+
+<div class="userinput">
+
+<!-- Input fields for student details -->
+<label for="Iden">ID:  </label>
+<input type="number" placeholder="ID" [(ngModel)]="id" name="Iden"/>
+
+<label for="name"> Name: </label>
+<input type="text" placeholder="Employee's Name" [(ngModel)]="name" /><br>
+
+<label for="age">Age: </label>
+<input type="number" placeholder="Age" [(ngModel)]="age" />
+
+<label for="course"> Position: </label>
+<input type="text" placeholder="Position" [(ngModel)]="position" /><br>
+
+<!-- Button to add a new student -->
+<button class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
+</div>
+
+
+<ul>
+  <span class="span">ID</span>
+  <span class="span">Name</span>
+  <span class="span">Age</span>
+  <span class="span">Position</span>
+  <li *ngFor="let employee of employee">
+     {{ employee.id }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     {{ employee.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ employee.age }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{ employee.position }}
+  </li>
+</ul>
+
+</body>
+</html>
