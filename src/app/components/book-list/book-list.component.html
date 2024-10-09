@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE LIST</title>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bolder;">EMPLOYEE LIST</p>
+
+<div class="userinput">
+
+<!-- Input fields for Employee details -->
+<label for="Iden">ID:  </label>
+<input type="number" placeholder="ID" [(ngModel)]="id" name="Iden"/>
+
+<label for="title"> TITLE: </label>
+<input type="text" placeholder="Enter book's title" [(ngModel)]="title" /><br>
+
+<label for="AUTHOR">AUTHOR: </label>
+<input type="text" placeholder="author" [(ngModel)]="author" />
+
+<label for="publishedyear"> Published Year: </label>
+<input type="number" placeholder="publishedyear" [(ngModel)]="publishedyear" /><br>
+
+<label for="Quantity"> Quantity: </label>
+<input type="number" placeholder="quantity" [(ngModel)]="quantity" /><br>
+
+<!-- Button to add a new student -->
+<button class="btn btn-primary" (click)="addBooks()">Add Books</button>
+</div>
+
+
+<ul>
+  <span class="span">ID</span>
+  <span class="span">TITLE</span>
+  <span class="span">AUTHOR</span>
+  <span class="span">PUBLISHED YEAR</span>
+  <span class="span">QUANTITY</span>
+  <li *ngFor="let books of books">
+     {{ books.id }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     {{ books.title }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ books.author }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{ books.publishedyear }}
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{books.quantity}}
+  </li>
+</ul>
+
+</body>
+</html>
