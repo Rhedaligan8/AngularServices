@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITY LIST</title>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bolder;">CITY LIST</p>
+
+<div class="userinput">
+
+<!-- Input fields for City details -->
+<label for="Iden">ID:  </label>
+<input type="number" placeholder="ID" [(ngModel)]="id" name="Iden"/>
+
+<label for="name"> Name: </label>
+<input type="text" placeholder="Enter City " [(ngModel)]="Name" /><br>
+
+<label for="Brgy">Barangay: </label>
+<input type="number" placeholder="Barnagay" [(ngModel)]="Brgy" />
+
+<label for="Zipcode"> Zip Code </label>
+<input type="number" placeholder="Zip Code" [(ngModel)]="Zipcode" /><br>
+
+
+<!-- Button to add a City -->
+<button class="btn btn-primary" (click)="addCity()">Add City</button>
+</div>
+
+
+<ul>
+  <span class="span">ID</span>
+  <span class="span">NAME</span>
+  <span class="span">BARANGAY</span>
+  <span class="span">ZIP CODE</span>
+  <li *ngFor="let city of city">
+     {{ city.id }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     {{ city.Name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ city.Brgy }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+     {{ city.Zipcode }}
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </li>
+</ul>
+
+</body>
+</html>
