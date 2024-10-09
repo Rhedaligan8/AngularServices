@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD SUBJECT LIST</title>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bolder;">SUBJECT LIST</p>
+
+<div class="userinput">
+
+<!-- Input fields for SUBJECT LIST details -->
+<label for="name">Name:  </label>
+<input type="text" placeholder="Subject name" [(ngModel)]="name" name="name"/>
+
+<label for="professor"> Professor: </label>
+<input type="text" placeholder="Professor's Name" [(ngModel)]="professor" /><br>
+
+<label for="schedule">schedule: </label>
+<input type="date" placeholder="Schedule" [(ngModel)]="schedule" />
+
+<label for="unit"> UNIT:  </label>
+<input type="number" placeholder="Enter Units" [(ngModel)]="unit" /><br>
+
+
+<!-- Button to add a SUBJECT IN THE LIST -->
+<button class="btn btn-primary" (click)="addSubject()">Add Subject</button>
+</div>
+
+
+<ul>
+  <span class="span">NAME</span>
+  <span class="span">PROFESSOR</span>
+  <span class="span">SCHEDULE</span>
+  <span class="span">UNIT</span>
+  <li *ngFor="let subs of subject">
+     {{ subs.name }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ subs.professor }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ subs.schedule }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ subs.unit }}
+    
+    
+  </li>
+</ul>
+
+</body>
+</html>
