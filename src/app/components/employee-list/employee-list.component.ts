@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmployeeListService } from '../employee-list.service';
 
 @Component({
   selector: 'app-employee-list',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './employee-list.component.css'
 })
 export class EmployeeListComponent {
+  constructor (private EmployeeListService:EmployeeListService){
+    this.employee = this.EmployeeListService.getEmployees();
+  }
   employee: { id: number; name: string; age: number; position: string }[] = [];
   
   // Properties for new Employee

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { StudentListService } from '../student-list.service';
+
 
 @Component({
   selector: 'app-student-list',
@@ -6,6 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './student-list.component.css'
 })
 export class StudentListComponent {
+  student = [] as StudentListComponent [];
+  constructor (private StudentListService: StudentListService) {
+    this.student = StudentListService.getStudent ();
+  }
+  
   students: { id: number; name: string; age: number; course: string }[] = [];
   
   // Properties for new student

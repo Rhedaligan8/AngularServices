@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CarmodelListService } from '../carmodel-list.service';
 
 @Component({
   selector: 'app-carmodel-list',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './carmodel-list.component.css'
 })
 export class CarmodelListComponent {
+  carmodels = [] as CarmodelListComponent [];
+  constructor(private carModelService: CarmodelListService){
+      this.carmodels = this.carModelService.getCarModel();
+  }
   carmodel: { id: number; types: string; brand: string; model:string; year:number }[] = [];
   
   // Properties for Add Car Model

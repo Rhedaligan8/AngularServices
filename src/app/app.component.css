@@ -1,0 +1,43 @@
+.route {
+    background-color: rgb(201, 44, 253);
+    border: 2px black solid;
+    border-radius: 2px;
+    color:black;
+    padding: 5px;
+    text-decoration: none;
+   
+    
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    justify-content: flex-end;
+    margin-top: 230px;
+    
+}
+nav li {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 10px;
+    font-size: 20px;
+    
+    
+
+}
+ol {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.active-link  {
+    background-color: #4CAF50; /* Example background color */
+    color: white; /* Optional: change text color for contrast */
+    padding: 5px;
+    border-radius: 4px;
+  }
+li a {
+    width: 100px;
+}
+

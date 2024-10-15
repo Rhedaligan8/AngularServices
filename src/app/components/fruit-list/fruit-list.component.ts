@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FruitListService } from '../fruit-list.service';
 
 @Component({
   selector: 'app-fruit-list',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './fruit-list.component.css'
 })
 export class FruitListComponent {
+  fruit = [] as FruitListComponent [];
+  constructor (private fruitService: FruitListService) {
+    this.fruit = this.fruitService.getfruits();
+  }
   fruits: { id: number; name: string; price: number; quantity: number }[] = [];
   
   // Properties for new Employee

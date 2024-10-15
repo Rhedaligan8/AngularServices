@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-
+import { ProductListService } from '../product-list.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
+  product = [] as ProductListComponent [];
+  constructor (private ProductService:ProductListService){
+    this.products =this.ProductService.getProduct();
+  }
   products: { id: number; name: string; types: string; price:number; quantity:number }[] = [];
   
   // Properties for Add Products

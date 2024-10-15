@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPLOYEE LIST</title>
+    <title>BOOKS LIST</title>
 </head>
 <body>
-    <p style="font-size: 20px; font-weight: bolder;">EMPLOYEE LIST</p>
+    <p style="font-size: 20px; font-weight: bolder;">BOOKS LIST</p>
 
 <div class="userinput">
 
-<!-- Input fields for Employee details -->
+<!-- Input fields for Books details -->
 <label for="Iden">ID:  </label>
 <input type="number" placeholder="ID" [(ngModel)]="id" name="Iden"/>
 
@@ -26,7 +26,7 @@
 <label for="Quantity"> Quantity: </label>
 <input type="number" placeholder="quantity" [(ngModel)]="quantity" /><br>
 
-<!-- Button to add a new student -->
+<!-- Button to add a Books -->
 <button class="btn btn-primary" (click)="addBooks()">Add Books</button>
 </div>
 
@@ -40,7 +40,7 @@
   <li *ngFor="let books of books">
      {{ books.id }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
      {{ books.title }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     {{ books.author }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{ books.publishedyear }}
+     {{ books.author }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{ books.publishedyear }}
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{books.quantity}}
   </li>
 </ul>
